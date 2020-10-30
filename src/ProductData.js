@@ -1,5 +1,5 @@
 const ProductData = {
-	title: 'FitBit 19 - The Smartest Watch',
+	title: 'Bubu 21 - The smartest watch on the market',
 	description: 'Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor.',
 	colorOptions: [
 			{
