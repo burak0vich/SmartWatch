@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.Container {
+  display: flex;
+  margin-top: 32px;
+  width: 100%;
+  padding: 4% 12%;
+  align-items: center;
+}
+
+.MainProduct {
+  width: 50%;
+  position: relative;
+}
+
+.ProductInfo {
+  width: 50%;
+}
+
