@@ -7,9 +7,7 @@ import Topbar from './Components/Topbar';
 
 class App extends Component {
 
-  state = {
-    productData: ProductData
-  }
+
 
   render() {
     return (
