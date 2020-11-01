@@ -27,6 +27,7 @@
 
 .MainProduct {
   width: 50%;
+  position: relative;
 }
 
 .MainProduct img{
@@ -97,4 +98,47 @@
   border: 0;
   padding: 12px 24px;
   margin-top: 36px;
+}
+
+.TimeData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.HeartRateData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.HeartRateData i {
+  color: red;
+  animation: heartbeat 1s infinite;
+}
+
+.HeartRateData p {
+  margin-top: 16px;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2)
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
 }

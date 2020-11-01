@@ -6,13 +6,21 @@ function App() {
     <div className="App">
       <header className ="App-header">
       <nav className={classes.topbar}>
-        <img src="https://i.dlpng.com/static/png/197684_preview.png" alt="Amazon Logo"/>
+        <img src="https://s.dlpng.com/static/png/197684_preview.png" alt="Amazon Logo"/>
       </nav>
       </header>
 
       <div className={classes.Container}>
         <div className={classes.MainProduct}>
           <img src="https://imgur.com/iOeUBV7.png" alt="Product Image"/>
+          {/* <div className={classes.TimeData}>
+            <p>{new Date().getHours().toString().padStart(2,'0') + ':' + new Date().getMinutes().toString().padStart(2,'0')}</p>
+          </div> */}
+
+          <div className={classes.HeartRateData}>
+            <i class="fas fa-heartbeat"></i>
+            <p>78</p>
+          </div>
         </div>
         <div className={classes.ProductInfo}>
           <h1 className= {classes.ProductTitle}>{ProductInfo.title}</h1>
