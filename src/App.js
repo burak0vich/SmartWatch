@@ -4,10 +4,15 @@ import classes from './Stylesheets/App.module.css';
 import MainProduct from './Components/MainProduct';
 import ProductDetails from './Components/ProductDetails';
 import Topbar from './Components/Topbar';
+import ProductInfo from './Components/ProductData';
 
 class App extends Component {
 
-
+  state = {
+    productInfo: ProductInfo,
+    currentPreviewImage: 'https://imgur.com/iOeUBV7.png',
+    showHeartBeat: false,
+  }
 
   render() {
     return (
@@ -20,7 +25,7 @@ class App extends Component {
           </div>
   
           <div className={classes.ProductInfo}>
-            <ProductDetails />
+            <ProductDetails data={this.state.productInfo} />
           </div>
   
         </div>
