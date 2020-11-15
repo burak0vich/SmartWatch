@@ -24,7 +24,7 @@
 .ProductImage {
   width: 100%;
   max-width: 80px;
-  
+  cursor: pointer;
   border-radius: 8px;
   margin-right: 15px;
   margin-bottom: 12px;
