@@ -1,51 +1,62 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import classes from './css/App.module.css';
-import MainProduct from './Components/MainProduct';
-import ProductDetails from './Components/ProductDetails';
-import Topbar from './Components/Topbar';
-import ProductInfo from './Components/ProductData';
+import MainProduct from './components/MainProduct'
+import ProductDetails from './components/ProductDetails'
+import Topbar from './components/Topbar'
+import ProductInfo from './components/ProductData'
+
+import classes from './css/App.module.css'
 
 class App extends Component {
 
-  state = {
-    productInfo: ProductInfo,
-    currentPreviewImagePos: 0,
-    currentSelectedFeature: 0,
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentPreviewImagePos: 0,
+      currentSelectedFeature: 0
+    }
   }
 
-  onColorClick = (pos) => {
-    this.setState({currentPreviewImagePos: pos});
+  onColorClick = (currentPreviewImagePos) => {
+    this.setState({ currentPreviewImagePos })
   }
 
-  onFeatureItemClick = (pos) => {
-    
-    this.setState({currentSelectedFeature: pos})
+  onFeatureItemClick = (currentSelectedFeature) => {
+    this.setState({ currentSelectedFeature })
   }
 
   render() {
+    const {
+      currentSelectedFeature,
+      currentPreviewImagePos
+    } = this.state
+
     return (
       <div className="App">
         <Topbar />
-  
+
         <div className={classes.Container}>
           <div className={classes.MainProduct}>
-            <MainProduct currentPreviewImage= {this.state.productInfo.colorOptions[this.state.currentPreviewImagePos].imageUrl} 
-                         currentSelectedFeature = {this.state.currentSelectedFeature}
-                         />
+            <MainProduct
+              currentPreviewImage={ProductInfo.colorOptions[currentPreviewImagePos].imageUrl}
+              currentSelectedFeature={currentSelectedFeature}
+            />
           </div>
   
           <div className={classes.ProductInfo}>
-            <ProductDetails data={this.state.productInfo} onColorClick={this.onColorClick} currentPreviewImagePos= {this.state.currentPreviewImagePos}
-             onFeatureItemClick = {this.onFeatureItemClick} currentSelectedFeature={this.state.currentSelectedFeature} />
+            <ProductDetails
+              data={ProductInfo}
+              currentPreviewImagePos={currentPreviewImagePos}
+              currentSelectedFeature={currentSelectedFeature}
+              onColorClick={this.onColorClick}
+              onFeatureItemClick={this.onFeatureItemClick}
+            />
           </div>
   
         </div>
       </div>
-    );
+    )
   }
-  }
+}
 
-  
-
-export default App;
+export default App
